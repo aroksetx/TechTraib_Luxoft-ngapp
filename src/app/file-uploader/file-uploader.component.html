@@ -1,0 +1,13 @@
+<div class="upload-container">
+  <p>Upload center:</p>
+  <div class="fu-contaier">
+    <div class="fu-controls">
+      <label for="public">Make public: </label>
+      <input id="public" type="checkbox" [(ngModel)]="isPublic">
+      <input type="file"  accept="image/*" (change)="uploadFile($event)">
+    </div>
+    <div class="fu-progress">
+      <mat-spinner *ngIf="showSpinner" [value]="processStatus | async" [mode]="'determinate'"></mat-spinner>
+    </div>
+  </div>
+</div>

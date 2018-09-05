@@ -1,0 +1,22 @@
+.login-container {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+
+.avatar {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.user-info {
+  padding-right: 10px;
+  display: contents;
+}
+
+.action-bt {
+  order: 1;
+  flex-grow: 1;
+  position: absolute;
+  right: 10px;
+}

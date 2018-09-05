@@ -1,0 +1,25 @@
+.bart {
+  background-image: url("../../assets/bart.png");
+  background-size: contain;
+  height: 240px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 50px;
+}
+
+.message {
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+.photo-comment {
+  position: absolute;
+  bottom: 0;
+  background-color: #f5f3f3b5;
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;
+  padding-left: 20px;
+}

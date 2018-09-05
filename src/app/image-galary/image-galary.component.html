@@ -1,0 +1,20 @@
+<div>
+  <div *ngIf="!userUID ; else showGallery">
+    <h3>Public photo board</h3>
+  </div>
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile
+      *ngFor="let image of imageList | async">
+      <a [href]="image.path" target="_blank" ><img [src]="image.path" width="100%"></a>
+      <div *ngIf="!userUID" class="photo-comment">
+        <span>From:</span> {{image.user}}
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<ng-template #showGallery>
+  <div>
+    <h4>Your photos:</h4>
+  </div>
+</ng-template>

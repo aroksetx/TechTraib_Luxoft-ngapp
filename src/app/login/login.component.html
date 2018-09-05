@@ -1,0 +1,13 @@
+<div class="login-container" *ngIf="authData.user | async as user; else showLogin">
+  <div class="user-info">
+    <h1>Hello {{ user.displayName }}!</h1>
+    <div class="avatar">
+      <img [src]="user.photoURL" width="30" [alt]="user.displayName">
+    </div>
+  </div>
+  <button class="action-bt" mat-raised-button (click)="logout()">Logout</button>
+</div>
+<ng-template #showLogin>
+  <span>Login in Photoßoard!</span>
+  <button class="action-bt" mat-raised-button (click)="login()">Login</button>
+</ng-template>
